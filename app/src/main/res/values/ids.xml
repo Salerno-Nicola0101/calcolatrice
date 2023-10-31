@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="Calcola" type="id">@+id/button</item>
+    <item name="secondo" type="id">@+id/textView4</item>
+    <item name="primo" type="id">@+id/textView</item>
+</resources>
