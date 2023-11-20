@@ -16,9 +16,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button Somma;
 
-    private Button Differenza;
     private Button Calcola;
     private EditText primo;
     private EditText secondo;
@@ -30,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Calcola = (Button) findViewById(R.id.Calcola);
+        Risultato = (TextView)findViewById(R.id.Calcola);
+        primo = (EditText)findViewById(R.id.primo);
+        secondo = (EditText)findViewById(R.id.secondo);
+
         Button btnSaluta = (Button)findViewById(R.id.calcola);
         final TextView txtViewSaluta= (TextView)findViewById(R.id.textView);
         btnSaluta.setOnClickListener(new Button.OnClickListener(){
@@ -40,26 +43,10 @@ public class MainActivity extends AppCompatActivity {
                 int n2 = Integer.parseInt(strNum2);
                 int res = n1 + n2 ;
                 String strStr = String.valueOf(res);
-                Risultato.setText(strStr);
+                Calcola.setText(strStr);
             }
         });
-        Somma = (Button) findViewById(R.id.button2);
-        Differenza = (Button) findViewById(R.id.button3);
-        Calcola = (Button) findViewById(R.id.Calcola);
-        Risultato = (TextView)findViewById(R.id.Calcola);
-        primo = (EditText)findViewById(R.id.primo);
-        secondo = (EditText)findViewById(R.id.secondo);
-    }
 
-    public void calcola(View v)
-    {
-        String strNum1 = primo.getText().toString();
-        String strNum2 = secondo.getText().toString();
-        int n1 = Integer.parseInt(strNum1);
-        int n2 = Integer.parseInt(strNum2);
-        int res = n1 + n2 ;
-        String strStr = String.valueOf(res);
-        Risultato.setText(strStr);
-}
+    }
 
 }
